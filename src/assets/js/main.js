@@ -566,24 +566,49 @@ document.addEventListener('DOMContentLoaded', function () {
     dropdownItems.forEach(item => {
         const link = item.querySelector('.header__bottom-link');
         const dropdown = item.querySelector('.header__bottom-list-dropdown');
+        
+        // Инициализация - устанавливаем начальную высоту
+        dropdown.style.maxHeight = '0';
+        dropdown.style.overflow = 'hidden';
+        dropdown.style.transition = 'max-height 0.3s ease, opacity 0.2s ease';
+        dropdown.style.opacity = '0';
 
         // Открытие/закрытие по клику
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            item.classList.toggle('active');
-
+            
             // Закрытие других открытых dropdown
             dropdownItems.forEach(otherItem => {
-                if (otherItem !== item) {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
                     otherItem.classList.remove('active');
+                    const otherDropdown = otherItem.querySelector('.header__bottom-list-dropdown');
+                    otherDropdown.style.maxHeight = '0';
+                    otherDropdown.style.opacity = '0';
                 }
             });
+
+            // Переключение текущего
+            if (item.classList.contains('active')) {
+                // Закрытие
+                dropdown.style.maxHeight = '0';
+                dropdown.style.opacity = '0';
+                setTimeout(() => {
+                    item.classList.remove('active');
+                }, 200); // Ждем завершения анимации
+            } else {
+                // Открытие
+                item.classList.add('active');
+                dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+                dropdown.style.opacity = '1';
+            }
         });
 
         // Закрытие при клике вне меню
         document.addEventListener('click', (e) => {
             if (!item.contains(e.target)) {
                 item.classList.remove('active');
+                dropdown.style.maxHeight = '0';
+                dropdown.style.opacity = '0';
             }
         });
     });

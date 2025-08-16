@@ -148,6 +148,11 @@
         height: 31px;
         border-radius: 5px;
         background-color: $color-middle-blue;
+
+        &--big {
+            width: 40px;
+            height: 40px;
+        }
     }
 
     &__middle-mobile-icon {
@@ -174,6 +179,9 @@
             max-height: calc(100vh - 128px);
             overflow-y: auto;
             background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
         }
     }
 
@@ -194,11 +202,14 @@
         position: relative;
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 0 5px;
 
         @media (max-width: 1023px) {
             flex-wrap: wrap;
             opacity: 1;
+            padding: 10px 0;
+            border-bottom: 1px solid #D3E2EE;
+            align-items: baseline;
         }
     }
 
@@ -207,12 +218,14 @@
         gap: 40px;
 
         @media (max-width: 1200px) {
-            gap: 19px;
+            gap: 17px;
         }
 
         @media (max-width: 1023px) {
             flex-direction: column;
-            padding: 40px 20px;
+            padding: 25px 15px;
+            gap: 0;
+
         }
     }
 
@@ -229,27 +242,32 @@
         transform: translateY(10px);
         transition: all 0.3s ease;
         z-index: 100;
-        padding: 10px 0;
         display: flex;
         flex-wrap: wrap;
+        will-change: max-height;
+        transition: max-height 0.3s ease, opacity 0.2s ease;
+        overflow: hidden;
 
         @media (max-width: 1023px) {
             position: static;
+            width: 100%;
+            background: #FFF;
+            box-shadow: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
         }
     }
 
-    &__bottom-wrapper-accordion {
-        @media (max-width: 1023px) {
-            width: 100%;
-        }
-    }
-    
 
     &__bottom-link {
         font-weight: 400;
         font-size: 16px;
         line-height: 25px;
         color: $color-light-black;
+
+        @media (max-width: 1023px) {
+            padding: 0 0 10px 0;
+        }
     }
 
     &__bottom-item-dropdown {
@@ -275,6 +293,11 @@
         padding: 8px 20px;
         color: $color-light-black;
         transition: background 0.2s;
+
+        @media (max-width: 1023px) {
+            padding: 0 0 10px 0;
+            color: rgba(13, 36, 54, 0.65);
+        }
     }
 
     &__bottom-link-dropdown:hover {
@@ -327,6 +350,38 @@
 
     &__burger-menu[aria-expanded="true"] &__burger-line:nth-child(3) {
         transform: translateY(-8.5px) rotate(-45deg);
+    }
+
+    &__bottom-nav-mobile {
+        display: none;
+
+
+        @media (max-width: 1023px) {
+            display: flex;
+            flex-direction: column;
+            padding: 25px 15px;
+            background-color: #E9EFFD;
+            gap: 10px;
+        }
+    }
+
+    &__bottom-mobile-call {
+        display: flex;
+        gap: 5px;
+    }
+
+    &__bottom-nav-mobile .header__middle-tel-number {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-light-black;
+    }
+
+    &__bottom-mobile-call .header__middle-button {
+        line-height: 20px;
+        font-size: 14px;
+        width: 100%;
     }
 
 }
