@@ -1,0 +1,151 @@
+.footer {
+    background-color: #0D2436;
+
+    &__wrapper {
+        padding: 80px 0;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media (max-width: 1023px) {
+            display: contents;
+        }
+    }
+
+    &__left-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 0 0 30px 0;
+    }
+
+    &__left-link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+        text-decoration: underline !important;
+        text-decoration-skip-ink: auto;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__left-socials {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__left-wrapper {
+        display: block;
+
+        @media (max-width: 1023px) {
+            display: flex;
+            order: 2;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__middle {
+        display: flex;
+        gap: 60px;
+
+        @media (max-width: 1023px) {
+            margin: 35px 0 0 0;
+            flex-direction: column;
+            width: 100%;
+            gap: 20px;
+        }
+    }
+
+    &__middle-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        opacity: 50%;
+        color: $color-white;
+    }
+
+    &__middle-list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__middle-list--title {
+        gap: 15px;
+
+        @media (max-width: 1023px) {
+            margin: 0 0 35px 0;
+            gap: 10px;
+        }
+    }
+
+    &__middle-link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $color-white;
+    }
+
+    &__middle-wapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+
+    &__right .header__middle-tel-number {
+        color: $color-white;
+    }
+
+
+    &__right .header__middle-location-city {
+        color: $color-white;
+    }
+
+    &__right .header__middle-tel {
+        margin: 0 0 15px 0;
+    }
+
+    &__right .header__middle-location {
+        margin: 0 0 40px 0;
+    }
+
+    &__right .header__middle-button {
+        @media (max-width: 1023px) {
+            margin: 0 0 35px 0;
+        }
+    }
+
+    &__bottom {
+        background-color: #071926;
+    }
+
+    &__bottom-text {
+        padding: 20px 0;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 15px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+}

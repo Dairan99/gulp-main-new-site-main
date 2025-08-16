@@ -1,0 +1,27 @@
+// global
+@import 'vendor/_reset';
+@import 'vendor/_normalize';
+@import 'vendor/_vars';
+@import 'vendor/_fonts';
+@import 'vendor/_base';
+@import 'vendor/_swiperCustom';
+@import 'vendor/_animation';
+
+
+// header
+@import 'vendor/popups/_popups.scss';
+@import 'vendor/popups/_popups-1.scss';
+@import 'vendor/all/_header';
+
+//blocks
+@import 'vendor/all/_intro.scss';
+@import 'vendor/all/_calc.scss';
+
+
+
+
+
+//footer
+@import 'vendor/all/_footer';
+
+

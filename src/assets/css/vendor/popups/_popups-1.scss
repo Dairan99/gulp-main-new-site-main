@@ -1,0 +1,123 @@
+.popup-change {
+    &__content {
+        max-width: 500px;
+        border-radius: 2px;
+        padding: 50px 60px;
+        border-radius: 30px;
+        background: $color-white;
+        color: $color-light-black;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 45px;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: $color-light-black;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        padding: 15px;
+        background-color: $color-red;
+        color: $color-white;
+        border-radius: 10px;
+    }
+}
+
+.popup-change-response {
+    &__content {
+        max-width: 530px;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        color: $color-white;
+    }
+
+    &__wrapper {
+        & h3 {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 110%;
+            text-align: center;
+            color: $color-white;
+            margin-bottom: 16px;
+        }
+
+        & p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__btn {
+        & button {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.popup[data-target="popup-change-ok"] {
+    & h3::before {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: url("./../img/popup/popup-ok.svg");
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+
+// media popup-change
+@media (max-width: 768px) {
+    .popup-change {
+        &__content {
+            padding: 60px 20px;
+        }
+
+        &__title {
+            font-size: 26px;
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            margin-bottom: 30px;
+        }
+    }
+
+    .popup-change-response {
+        &__content {
+            padding: 60px 20px;
+        }
+
+        &__wrapper {
+            & h3 {
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+
+            & p {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

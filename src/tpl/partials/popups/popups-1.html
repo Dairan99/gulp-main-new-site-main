@@ -1,0 +1,65 @@
+<div class="popup" data-target="popup-change"> 
+    <div class="popup__body">
+        <div class="popup__content popup-change__content">
+            <div class="close-popup close-popup-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.391168 0.393822C0.912725 -0.131274 1.75834 -0.131274 2.27989 0.393822L15.501 13.7046C16.0225 14.2297 16.0225 15.081 15.501 15.6061C14.9794 16.1312 14.1338 16.1312 13.6123 15.6061L0.391168 2.29536C-0.130389 1.77027 -0.130389 0.918917 0.391168 0.393822Z" fill="#B6C4DE" />
+                    <path d="M0.499023 15.6062C-0.0225343 15.0811 -0.0225343 14.2297 0.499023 13.7046L13.7201 0.39386C14.2417 -0.131236 15.0873 -0.131236 15.6088 0.39386C16.1304 0.918956 16.1304 1.7703 15.6088 2.2954L2.38775 15.6062C1.86619 16.1313 1.02058 16.1313 0.499023 15.6062Z" fill="#B6C4DE" />
+                  </svg>
+            </div> 
+
+            <div class="popup-change__text">
+                <p class="popup-change__title original-title">Заказать звонок</p>
+                <p class="popup-change__subtitle">Оставьте заявку для связи со специалистом</p>                        
+            </div>
+
+            <form class="popup-change__form">
+
+                <input name='catalogue' type='hidden' value='<?= $current_catalogue["Catalogue_ID"] ?>' />
+                <input name="BitrixID" type="hidden" value='<?= $current_catalogue["BitrixID"] ?>'>
+                <input name='city' type='hidden' value='<?= $current_catalogue["Catalogue_Name"] ?>' />
+                <input name='type' type='hidden' value='request' />
+                <input name='cc' type='hidden' value='2' />
+                <input name='sub' type='hidden' value='8' />
+                <input name='mes' type='hidden' value='22' />
+                <input name="urlMessage" type="hidden" value="">
+                <input name="title_url_message" type="hidden" value="">
+
+                <div class="input-wrapper">
+                    <input type="text" name="params[name][]" class="input popup-change__input" placeholder="Ваше имя" required> 
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="tel" name="params[phone][]" class="input popup-change__input" placeholder="Номер телефон" required>
+                </div>
+
+                <button type="submit" class="popup-change__btn"><span>Получить консультацию</span></button>
+                <div class="politic popup-change__politic">
+                    <label for="politic">Нажимая на кнопку, "Оставить заявку", вы соглашаетесь с <a href="#" rel="nofollow">Политикой конфиденциальности</a></label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup-response" data-modal-ok="result-wrapper" data-modal-err="result-wrapper" data-modal-open="open active">
+    <div class="popup__body">
+        <div class="popup__content popup-change__content popup-change-response__content">
+            <div class="close-popup close-popup-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.391168 0.393822C0.912725 -0.131274 1.75834 -0.131274 2.27989 0.393822L15.501 13.7046C16.0225 14.2297 16.0225 15.081 15.501 15.6061C14.9794 16.1312 14.1338 16.1312 13.6123 15.6061L0.391168 2.29536C-0.130389 1.77027 -0.130389 0.918917 0.391168 0.393822Z" fill="white" />
+                    <path d="M0.499023 15.6062C-0.0225343 15.0811 -0.0225343 14.2297 0.499023 13.7046L13.7201 0.39386C14.2417 -0.131236 15.0873 -0.131236 15.6088 0.39386C16.1304 0.918956 16.1304 1.7703 15.6088 2.2954L2.38775 15.6062C1.86619 16.1313 1.02058 16.1313 0.499023 15.6062Z" fill="white" />
+                  </svg>
+            </div>
+
+            <div class="result-wrapper popup-change-response__wrapper">
+                <h3>Ваша заявка успешно отправлена</h3>
+                <p>Наши специалисты свяжутся с вами в течение 15 минут.</p>
+            </div>
+
+            <div class="popup-change-response__btn">
+                <button class="btn-white close-popup-btn">Вернуться на страницу</button>
+            </div>
+        </div>
+    </div>
+</div>

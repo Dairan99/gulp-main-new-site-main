@@ -1,0 +1,86 @@
+/* tab */
+
+.tab {
+    &_btns {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+    
+    &_btn {
+        border-radius: 5px;
+        padding: 8px 16px;
+        background: var(--bg-svetlo-seryy);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        color: var(--tekst-svetlyy);
+        transition: all 0.3s ease;
+    
+        &.tab__btn--active {
+            background: var(--color-svetlo-zelenyy-1);
+            color: var(--tekst);
+        }
+    }
+
+    &_btn-circle {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1060px) {
+    .tab {
+        &_btns {
+            flex-direction: column;
+            gap: 0;
+            max-height: 54px;
+            overflow: hidden;
+            margin-bottom: 0;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            &.active {
+                max-height: 400px;
+                .tab__btn--active {
+                    border-radius: 5px 5px 0 0;
+                }
+                .tab__btn-circle {
+                    transform: rotate(270deg);
+                }
+            }
+        }
+    
+        &_btn {
+            border-radius: 0;
+            padding: 16px 0;
+            background: transparent;
+            text-align: left;
+            border-bottom: 1px solid rgba(61, 124, 133, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 20px;
+            .tab__btn-circle {
+                opacity: 0;
+            }
+            &.tab__btn--active {
+                border-radius: 5px;
+                padding: 12px 18px;
+                border-bottom: none;
+                margin: 0;
+                order: -1;
+                .tab__btn-circle {
+                    opacity: 1;
+                }
+            }
+        }
+    
+        &_btn-circle {
+            display: flex;
+            background: rgba(61, 124, 133, 0.25);
+            color: var(--tekst-svetlyy);
+            transform: rotate(90deg);
+        }
+    }
+}

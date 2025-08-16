@@ -1,0 +1,120 @@
+// animation
+@keyframes transformItem {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.transform-item {
+    opacity: 0;
+}
+
+.scale-item {
+    scale: 0.6;
+    opacity: 0;
+    transition: scale .4s ease, opacity .3s ease;
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-120px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.text-animation {
+    opacity: 0;
+}
+
+.animation-active {
+    &.scale-item {
+        opacity: 1;
+        scale: 1;
+        &:nth-child(2n) {
+            transition: scale .6s ease, opacity .5s ease;
+        }
+        &:nth-child(3n) {
+            transition: scale .9s ease, opacity .8s ease;
+        }
+        &:nth-child(5n) {
+            transition: scale .7s ease, opacity .6s ease;
+        }
+        &:nth-child(7n) {
+            transition: scale .8s ease, opacity .7s ease;
+        }
+    }
+    &.text-animation  {
+        opacity: 1;
+        animation: textAnimation .4s forwards;
+    }
+    &.transform-item {
+        opacity: 1;
+        animation: transformItem .4s forwards;
+        &:nth-child(2n) {
+            animation: transformItem .6s forwards;
+        }
+        &:nth-child(3n) {
+            animation: transformItem .7s forwards;
+        }
+        &:nth-child(5n) {
+            animation: transformItem .8s forwards;
+        }
+        &:nth-child(7n) {
+            animation: transformItem .9s forwards;
+        }
+    }
+}
+
+
+/* animation photo */
+.img-animation img {
+    -webkit-transition: scale 3s ease;
+    -o-transition: scale 3s ease;
+    transition: scale 3s ease;
+}
+
+.img-animation {
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px;
+    &:hover img {
+        scale: 1.08;
+    }
+
+    // one option to choose
+
+    // option-2
+    &::before {
+        border-radius: 2px;
+        display: block;
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        /* opacity: 0.5; */
+        -webkit-clip-path: circle(0% at 100% 100%);
+                clip-path: circle(0% at 100% 100%);
+        z-index: 2;
+        -webkit-transition: -webkit-clip-path 0.4s ease-in-out;
+        transition: -webkit-clip-path 0.4s ease-in-out;
+        -o-transition: clip-path 0.4s ease-in-out;
+        transition: clip-path 0.4s ease-in-out;
+        transition: clip-path 0.4s ease-in-out, -webkit-clip-path 0.4s ease-in-out;
+        background: rgba(66, 133, 244, 0.2);
+    }
+    &:hover::before {
+        -webkit-clip-path: circle(100%);
+                clip-path: circle(100%);
+    }
+}
+
+

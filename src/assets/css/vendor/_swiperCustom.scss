@@ -1,0 +1,143 @@
+/* swiper CUSTOM */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-paginations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+/* swiper-buttons */
+.swiper-btns {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.swiper-button-next, .swiper-button-prev {
+    position: static;
+    margin: 0;
+    min-width: 56px;
+    width: 56px;
+    height: 56px;
+    border-radius: 5px;
+    border: 1px solid #E6E6E6;
+    transition: all 0.3s ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    border: 1px solid $color-orange;
+}
+
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after {
+    background-color: $color-orange;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #191A2A; /* Цвет стрелки по умолчанию */
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.7841 13.7951C7.51039 14.0683 7.06729 14.0683 6.79428 13.7951C6.52058 13.5218 6.52058 13.0795 6.79428 12.8069L11.3023 8.30678C11.5228 8.08665 11.3667 7.71068 11.0552 7.71068H0.700009C0.313604 7.71068 0 7.3913 0 7.00555V7.00247C0 6.61672 0.313604 6.31272 0.700009 6.31272H11.0552C11.3667 6.31272 11.5228 5.93607 11.3023 5.71594L6.77259 1.19324C6.49888 0.919998 6.49888 0.477651 6.77259 0.204411C7.04559 -0.0681369 7.48869 -0.0681369 7.7624 0.204411L13.59 6.02287C14.1367 6.56866 14.1367 7.45337 13.59 7.99916C13.4479 8.14102 7.6714 13.9076 7.7841 13.7951Z" fill="black"/></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.7841 13.7951C7.51039 14.0683 7.06729 14.0683 6.79428 13.7951C6.52058 13.5218 6.52058 13.0795 6.79428 12.8069L11.3023 8.30678C11.5228 8.08665 11.3667 7.71068 11.0552 7.71068H0.700009C0.313604 7.71068 0 7.3913 0 7.00555V7.00247C0 6.61672 0.313604 6.31272 0.700009 6.31272H11.0552C11.3667 6.31272 11.5228 5.93607 11.3023 5.71594L6.77259 1.19324C6.49888 0.919998 6.49888 0.477651 6.77259 0.204411C7.04559 -0.0681369 7.48869 -0.0681369 7.7624 0.204411L13.59 6.02287C14.1367 6.56866 14.1367 7.45337 13.59 7.99916C13.4479 8.14102 7.6714 13.9076 7.7841 13.7951Z" fill="black"/></svg>');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: all 0.3s ease;
+}
+.swiper-button-prev:after {
+    transform: rotate(180deg);
+}
+
+/* swiper-buttons--white */
+.swiper-button-next--white, .swiper-button-prev--white {
+    background: #fff;
+    border: 1px solid var(--osnovnoy);
+}
+.swiper-button-next--white:hover,.swiper-button-prev--white:hover {
+    background:  var(--osnovnoy);
+}
+.swiper-button-next--white:hover:after, .swiper-button-prev--white:hover:after {
+    background-color: #fff; 
+}
+
+
+/* swiper-pagination  */
+.swiper-pagination {
+    position: static;
+    width: auto !important;
+
+    &-bullet {
+        position: static;
+        border-radius: 2px;
+        width: 8px;
+        height: 8px;
+        background: $color-black;
+    }
+}
+
+.swiper-number {
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 110%;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in;
+}
+
+
+
+.swiper-pagination-fraction {
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+
+    .swiper-pagination-current {
+        font-weight: 700;
+        font-size: 26px;
+        color: var(--belyy);
+    }
+}
+
+.swiper-scrollbar {
+    position: static !important;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    &-drag {
+        background: var(--belyy);
+        border-radius: 10px;
+    }
+}
+.swiper-scrollbar-temnyy {
+    position: static !important;
+    background: var(--izobrazhenie);
+    .swiper-scrollbar-drag {
+        background: var(--color-zelenyy);
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-number {
+        flex-grow: 1;
+        height: 44px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 110%;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease-in;
+    }
+}

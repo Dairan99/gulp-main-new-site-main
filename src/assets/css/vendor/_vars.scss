@@ -1,0 +1,70 @@
+// roots
+:root {
+	--container-width: 1360px;
+	--container-padding: 20px;
+
+	--plashki: #424e59;
+	--izobrazhenie: #d2dce8;
+	--fon-plashek: #eaedf2;
+	--temnyy: #080b0f;
+	--tekst: #003649;
+	--tekst-svetlyy: #405f6a;
+	--belyy: #fff;
+	--tegi: #556473;
+	--bg-svetlo-seryy: #f9f9f9;
+	--color-temno-zelenyy: #206175;
+	--color-zelenyy: #3d7c85;
+	--color-svetlo-zelenyy-1: #bedbd7;
+	--color-svetlo-zelenyy-2: rgba(190, 219, 215, 0.4);
+	--gradient-green: linear-gradient(222deg, rgba(106,165,174,1) 0%, rgba(61,124,133,1) 100%);
+	--gradient-light-gray: linear-gradient(222deg, rgba(247,250,255,1) 0%, rgba(234,237,242,1) 100%);
+	--gradient-for-photo-decor: linear-gradient(0deg, rgba(32,97,117,1) 0%, rgba(32,97,117,0) 30%, rgba(32,97,117,0) 100%);;
+	--decor-gray: #C7D6DC;
+
+
+	--font-family: "Roboto", sans-serif;
+	--temnyy: #3c3232;
+	--osnovnoy: #4285f4;
+	--akcent: #ed4545;
+}
+
+//Color
+$color-dark-blue: #2E2F45;
+$color-black-blue:#34354D;
+$color-blue-border:#393A55;
+$color-white:#FFFFFF;
+$color-light-green:#00D95F;
+$color-very-light-gray:#F8F8F8;
+$color-light-gray:#E6E6E6;
+$color-orange:#EF8459;
+$color-txt-black:#515151;
+$color-green:#A6C68D;
+$color-black:#191A2A;
+$color-black-gray:#515151;
+$color-dark-gray:#7A7A7A;
+$color-gray:#F8F8F8;
+$color-beige:#FFD5C3;
+$color-light-green:#E9FCDA;
+$color-extra-light-gray:#E6E6E6;
+$color-dark-green:#00D95F;
+$color-very-green:#A6C68D;
+$color-very-gray:#E6E6E6;
+$color-very-green:#A6C68D;
+$color-border:#393A55;
+$color-support-txt:#313131;
+$color-support-txt-gray:#828282;
+$color-breadcrumbs: #4A4A4A;
+$color-breadcrumbs-arrow:#828282;
+$color-gray-extra:#D8D8D8;
+$color-light-black:#0D2436;
+$color-red:#EA1414;
+$color-light-blue:#D3E2EE;
+$color-middle-blue:#84A4E4;
+
+// Typography
+$ff-robo: "Roboto", "Arial", sans-serif;
+
+// Viewport
+
+$vp-tablet: 1023px;
+$vp-mobile: 767px;

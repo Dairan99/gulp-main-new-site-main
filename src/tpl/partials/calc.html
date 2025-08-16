@@ -1,0 +1,148 @@
+<section class="calculator">
+    <div class="container">
+        <div class="calculator__content">
+            <div class="calculator__content-left">
+                <picture>
+                    <source srcset="assets/img/img-calc.webp" type="image/webp">
+                    <img src="assets/img/img-calc.png" loading="lazy" alt="Калькулятор стоимости услуг" class="calculator__image">
+                </picture>
+            </div>
+            
+            <div class="calculator__content-right">
+                <div class="calculator__wrapper webp-img b-lazy" data-webp="/site_files/img/grey-wave-bg.webp" data-img="/site_files/img/grey-wave-bg.png">
+                    <div class="calculator__inner site-container">
+                        <h2 class="calculator__title site-title">Калькулятор стоимости услуг</h2>
+                        
+                        <form class="calculator__form">
+                            <div class="calculator__left">
+                                <!-- Первый селект -->
+                                <div class="calculator__item" id="rel_div">
+                                    <label class="calculator__label">Кому нужна помощь?</label>
+                                    <div class="calculator__custom-select">
+                                        <select class="calculator__select" id="rel_select" hidden>
+                                            <option coefficient="0" value="0">Выбрать</option>
+                                            <option coefficient="1" value="1">Мне</option>
+                                            <option coefficient="1" value="2">Мужу/Жене</option>
+                                            <option coefficient="1" value="3">Сыну/Дочери</option>
+                                            <option coefficient="1" value="4">Матери/Отцу</option>
+                                            <option coefficient="1" value="5">Родственнику</option>
+                                            <option coefficient="1" value="6">Другу/знакомому</option>
+                                        </select>
+                                        <div class="calculator__select-header">
+                                            <span class="calculator__select-current">Выбрать</span>
+                                            <img class="calculator__icon" src="assets/img/icons/icon-arrows-down.svg" loading="lazy" alt="" aria-hidden="true">
+                                        </div>
+                                        <div class="calculator__select-options">
+                                            <div class="calculator__option" data-value="0" data-coefficient="0">Выбрать</div>
+                                            <div class="calculator__option" data-value="1" data-coefficient="1">Мне</div>
+                                            <div class="calculator__option" data-value="2" data-coefficient="1">Мужу/Жене</div>
+                                            <div class="calculator__option" data-value="3" data-coefficient="1">Сыну/Дочери</div>
+                                            <div class="calculator__option" data-value="4" data-coefficient="1">Матери/Отцу</div>
+                                            <div class="calculator__option" data-value="5" data-coefficient="1">Родственнику</div>
+                                            <div class="calculator__option" data-value="6" data-coefficient="1">Другу/знакомому</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Второй селект -->
+                                <div class="calculator__item" id="rel_div">
+                                    <label class="calculator__label">Услуги?</label>
+                                    <div class="calculator__custom-select">
+                                        <select class="calculator__select" id="rel_select" hidden>
+                                            <option coefficient="0" value="0">Выбрать</option>
+                                            <option coefficient="5500" value="1">Вывод из запоя</option>
+                                            <option coefficient="9500" value="2">Стационар</option>
+                                            <option coefficient="6500" value="3">Снятие ломки</option>
+                                            <option coefficient="40000" value="4">Реабилитация</option>
+                                        </select>
+                                        <div class="calculator__select-header">
+                                            <span class="calculator__select-current">Выбрать</span>
+                                            <img class="calculator__icon" src="assets/img/icons/icon-arrows-down.svg" loading="lazy" alt="" aria-hidden="true">
+                                        </div>
+                                        <div class="calculator__select-options">
+                                            <div class="calculator__option" data-value="0" data-coefficient="0">Выбрать</div>
+                                            <div class="calculator__option" data-value="1" data-coefficient="5500">Мне</div>
+                                            <div class="calculator__option" data-value="2" data-coefficient="9500">Мужу/Жене</div>
+                                            <div class="calculator__option" data-value="3" data-coefficient="6500">Сыну/Дочери</div>
+                                            <div class="calculator__option" data-value="4" data-coefficient="40000">Матери/Отцу</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Третий селект -->
+                                <div class="calculator__item" id="rel_div">
+                                    <label class="calculator__label">Сколько лет зависимому?</label>
+                                    <div class="calculator__custom-select">
+                                        <select class="calculator__select" id="rel_select" hidden>
+                                            <option coefficient="0" value="0">Выбрать</option>
+                                            <option coefficient="1" value="1">Моложе 20</option>
+                                            <option coefficient="1" value="2">20-35</option>
+                                            <option coefficient="1" value="3">36-45</option>
+                                            <option coefficient="1" value="4">46-60</option>
+                                            <option coefficient="1.25" value="5">Старше 60</option>
+                                        </select>
+                                        <div class="calculator__select-header">
+                                            <span class="calculator__select-current">Выбрать</span>
+                                            <img class="calculator__icon" src="assets/img/icons/icon-arrows-down.svg" loading="lazy" alt="" aria-hidden="true">
+                                        </div>
+                                        <div class="calculator__select-options">
+                                            <div class="calculator__option" data-value="0" data-coefficient="0">Выбрать</div>
+                                            <div class="calculator__option" data-value="1" data-coefficient="1">Моложе 20</div>
+                                            <div class="calculator__option" data-value="2" data-coefficient="1">20-35</div>
+                                            <div class="calculator__option" data-value="3" data-coefficient="1">36-45</div>
+                                            <div class="calculator__option" data-value="4" data-coefficient="1">46-60</div>
+                                            <div class="calculator__option" data-value="5" data-coefficient="1.25">Старше 60</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Четвертый селект -->
+                                <div class="calculator__item" id="rel_div">
+                                    <label class="calculator__label">Длительность употребления</label>
+                                    <div class="calculator__custom-select">
+                                        <select class="calculator__select" id="rel_select" hidden>
+                                            <option coefficient="0" value="0">Выбрать</option>
+                                            <option coefficient="0.8" value="1">Мне</option>
+                                            <option coefficient="1" value="2">Мужу/Жене</option>
+                                            <option coefficient="1.2" value="3">Сыну/Дочери</option>
+                                            <option coefficient="1.5" value="4">Матери/Отцу</option>
+                                            <option coefficient="1" value="5">Родственнику</option>
+                                        </select>
+                                        <div class="calculator__select-header">
+                                            <span class="calculator__select-current">Выбрать</span>
+                                            <img class="calculator__icon" src="assets/img/icons/icon-arrows-down.svg" loading="lazy" alt="" aria-hidden="true">
+                                        </div>
+                                        <div class="calculator__select-options">
+                                            <div class="calculator__option" data-value="0" data-coefficient="0">Выбрать</div>
+                                            <div class="calculator__option" data-value="1" data-coefficient="0.8">Мне</div>
+                                            <div class="calculator__option" data-value="2" data-coefficient="1">Мужу/Жене</div>
+                                            <div class="calculator__option" data-value="3" data-coefficient="1.2">Сыну/Дочери</div>
+                                            <div class="calculator__option" data-value="4" data-coefficient="1.5">Матери/Отцу</div>
+                                            <div class="calculator__option" data-value="5" data-coefficient="1">Родственнику</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calculator__bottom-wrapper">
+                                <div class="calculator__item btn_set" id="result_div">
+                                    <button type="button" class="calculator__btn btn-red">Рассчитать стоимость</button>
+                                </div>
+                                <div class="calculator__right">
+                                    <div class="calculator__price">
+                                        <div class="calculator__price-title">Итого:</div>
+                                        <div class="calculator__price-count" id="calc_result">
+                                            <span>0</span>
+                                            <span>₽</span>
+                                        </div>
+                                        <div id="calc_dislaimer" class="calculator__disclaimer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

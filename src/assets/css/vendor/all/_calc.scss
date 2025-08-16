@@ -1,0 +1,136 @@
+.calculator {
+    padding: 140px 0;
+    background-color: #E9EFFD;
+
+    &__content {
+        display: flex;
+        gap: 85px;
+        align-items: center;
+
+        @media (max-width: 1023px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__title {
+        display: block;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 45px;
+        margin: 0 0 30px 0;
+    }
+
+    &__lable {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    &__select {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        border: none;
+        margin: 10px 0 0 0;
+    }
+
+    &__item {
+        position: relative;
+        max-width: 339px;
+        width: 100%;
+    }
+
+    &__left {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px 15px;
+        margin: 0 0 45px 0;
+    }
+
+    &__btn {
+        max-width: 339px;
+        width: 100%;
+        padding: 15px 83px;
+    }
+
+    &__bottom-wrapper {
+        display: flex;
+        gap: 40px;
+        align-items: flex-end;
+
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__price-count span {
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+
+    &__custom-select {
+        position: relative;
+        margin-top: 8px;
+    }
+
+    &__select-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        border: 1px solid #D3E2EE;
+        border-radius: 8px;
+        background: white;
+        cursor: pointer;
+    }
+
+    &__select-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border: 1px solid #D3E2EE;
+        border-radius: 8px;
+        margin-top: 4px;
+        max-height: 300px;
+        overflow-y: auto;
+        display: none;
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    &__option {
+        padding: 12px 16px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    &__option:hover {
+        background: #F5F9FF;
+    }
+
+    &__icon {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Открытое состояние */
+    &__custom-select.active &__select-options {
+        display: block;
+    }
+
+    &__custom-select.active &__icon {
+        transform: rotate(180deg);
+    }
+}
