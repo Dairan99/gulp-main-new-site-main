@@ -1,0 +1,49 @@
+.stages-work {
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px 0;
+    }
+
+    &__item {
+        display: flex;
+        gap: 25px;
+        width:100%;
+        max-width: 352px;
+    }
+
+    &__item-right {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        position: relative;
+    }
+
+    &__number {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #84A4E4;
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 25px;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #EA1414;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+        }
+    }
+
+
+}

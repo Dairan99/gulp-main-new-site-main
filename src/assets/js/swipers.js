@@ -4,126 +4,6 @@
 //new swiper
 
 document.addEventListener('DOMContentLoaded', function() {
-    const licenseItems = document.querySelectorAll('.license-page__item');
-    let swiperInstance = null;
-
-    function initLicenseSwiper() {
-        if (window.innerWidth < 1024) {
-            // Активация слайдера
-            if (!swiperInstance) {
-                swiperInstance = new Swiper('.licensePageSwiper', {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    navigation: {
-                        nextEl: '.license-page__swiper-button-next',
-                        prevEl: '.license-page__swiper-button-prev',
-                    },
-                    pagination: {
-                        el: '.license-page__swiper-pagination',
-                        clickable: true,
-                    },
-                    breakpoints: {
-                        650: {
-                            slidesPerView: 2,
-                            spaceBetween: 20
-                        },
-                        850: {
-                            slidesPerView: 3,
-                            spaceBetween: 20
-                        },
-                        1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 26
-                        }
-                    }
-                });
-            }
-        } else {
-            // Деактивация слайдера
-            if (swiperInstance) {
-                swiperInstance.destroy(true, true);
-                swiperInstance = null;
-            }
-            // Возвращаем нормальное состояние
-            licenseItems.forEach(item => {
-                item.style.width = '';
-                item.style.marginRight = '';
-            });
-        }
-    }
-
-    // Инициализация при загрузке
-    initLicenseSwiper();
-
-    // Оптимизация ресайза
-    let resizeTimeout;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(initLicenseSwiper, 150);
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const licenseItems = document.querySelectorAll('.gallery__item');
-    let swiperInstance = null;
-
-    function initLicenseSwiper() {
-        if (window.innerWidth < 1024) {
-            // Активация слайдера
-            if (!swiperInstance) {
-                swiperInstance = new Swiper('.gallerySwiper', {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    navigation: {
-                        nextEl: '.gallery__swiper-button-next',
-                        prevEl: '.gallery__swiper-button-prev',
-                    },
-                    pagination: {
-                        el: '.gallery__swiper-pagination',
-                        clickable: true,
-                    },
-                    breakpoints: {
-                        650: {
-                            slidesPerView: 2,
-                            spaceBetween: 20
-                        },
-                        850: {
-                            slidesPerView: 3,
-                            spaceBetween: 20
-                        },
-                        1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 26
-                        }
-                    }
-                });
-            }
-        } else {
-            // Деактивация слайдера
-            if (swiperInstance) {
-                swiperInstance.destroy(true, true);
-                swiperInstance = null;
-            }
-            // Возвращаем нормальное состояние
-            licenseItems.forEach(item => {
-                item.style.width = '';
-                item.style.marginRight = '';
-            });
-        }
-    }
-
-    // Инициализация при загрузке
-    initLicenseSwiper();
-
-    // Оптимизация ресайза
-    let resizeTimeout;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(initLicenseSwiper, 150);
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
     const licenseItems = document.querySelectorAll('.reviews-page__item');
     let swiperInstance = null;
 
@@ -131,15 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.innerWidth < 1024) {
             // Активация слайдера
             if (!swiperInstance) {
-                swiperInstance = new Swiper('.reviewsPageSwiper', {
+                swiperInstance = new Swiper('.clinicServicesSwiper', {
                     slidesPerView: 1,
                     spaceBetween: 20,
                     navigation: {
-                        nextEl: '.reviews-page__swiper-button-next',
-                        prevEl: '.reviews-page__swiper-button-prev',
+                        nextEl: '.clinic-service__swiper-button-next',
+                        prevEl: '.clinic-service__swiper-button-prev',
                     },
                     pagination: {
-                        el: '.reviews-page__swiper-pagination',
+                        el: '.clinic-service__swiper-pagination',
                         clickable: true,
                     },
                     breakpoints: {
@@ -152,12 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             spaceBetween: 20
                         },
                         950: {
-                            slidesPerView: 2,
+                            slidesPerView: 3,
                             spaceBetween: 20
                         },
                         1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 26
+                            slidesPerView: 3,
+                            spaceBetween: 20
                         }
                     }
                 });

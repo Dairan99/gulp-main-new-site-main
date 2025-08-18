@@ -52,13 +52,13 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1231px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 15px;
 }
 
 .section-offset {
-    margin-bottom: 80px;
+    margin-bottom: 135px;
 
     @media (max-width: 768px) {
         margin-bottom: 40px;
@@ -319,7 +319,7 @@ body {
     font-family: var(--font-family);
     font-weight: 700;
     line-height: 110%;
-    color: var(--temnyy);
+    color: $color-light-black;
 }
 
 .title-h1 {
@@ -332,21 +332,21 @@ body {
 }
 
 .title-h2 {
-    font-size: 48px;
+    font-size: 42px;
+    font-weight: 700;
     position: relative;
-    padding-bottom: 23px;
     margin-bottom: 40px;
 
-    &::after {
-        content: "";
-        display: block;
-        width: 100px;
-        height: 3px;
-        background: var(--osnovnoy);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
+    // &::after {
+    //     content: "";
+    //     display: block;
+    //     width: 100px;
+    //     height: 3px;
+    //     background: var(--osnovnoy);
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    // }
 }
 
 /*  form  */

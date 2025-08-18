@@ -614,6 +614,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// конец выпадающего списка
+
 document.addEventListener('DOMContentLoaded', function() {
   // Находим кнопку и добавляем обработчик
   const resultButton = document.querySelector('#result_div button');

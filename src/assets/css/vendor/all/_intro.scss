@@ -1,9 +1,20 @@
 .intro {
     position: relative;
+    height: 580px;
+
+    @media (max-width: 1200px) {
+        height: auto;
+    }
 
     &__content {
         display: flex;
         height: 508px;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            justify-content: center;
+            height: auto;
+        }
     }
 
     &__content-left {
@@ -12,6 +23,10 @@
         padding: 120px 0 0 0;
         max-width: 508px;
         width: 100%;
+
+        @media (max-width: 1200px) {
+            margin: 0 0 45px 0;
+        }
     }
 
     &__content-title {
@@ -39,8 +54,11 @@
     &__content-img {
         z-index: -1;
         position: absolute;
-        top: 69px;
-        left: 721px;
+        bottom: 0;
+
+        @media (max-width: 1200px) {
+            position: static;
+        }
     }
 
 }
