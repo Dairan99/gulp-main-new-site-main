@@ -1,0 +1,73 @@
+.licenses {
+    padding: 140px 0;
+    background-color: #E9EFFD;
+
+    @media (max-width: 1023px) {
+        padding: 80px 0;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+        }
+    }
+
+    &__content-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content-title {
+        
+        @media (max-width: 1023px) {
+            font-size: 28px;
+            line-height: 35px;
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &__content-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+
+        @media (max-width: 1023px) {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__swiper-button {
+        position: relative;
+        width:100%;
+        max-width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #84A4E4;
+    }
+
+    &__icon-button-swiper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__wrapper-buttons {
+        margin-top: auto;
+        display: flex;
+        gap: 15px;
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
+    }
+
+    &__pagination {
+        padding: 0 30px 0 0;
+    }
+}

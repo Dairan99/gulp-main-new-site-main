@@ -4,7 +4,7 @@
 //new swiper
 
 document.addEventListener('DOMContentLoaded', function() {
-    const licenseItems = document.querySelectorAll('.reviews-page__item');
+    const clinicServices = document.querySelectorAll('.reviews-page__item');
     let swiperInstance = null;
 
     function initLicenseSwiper() {
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 swiperInstance = null;
             }
             // Возвращаем нормальное состояние
-            licenseItems.forEach(item => {
+            clinicServices.forEach(item => {
                 item.style.width = '';
                 item.style.marginRight = '';
             });
@@ -68,26 +68,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const licenseItems = document.querySelectorAll('.documents__item');
+    const licenseItems = document.querySelectorAll('.stagesTreatmentSwiper');
     let swiperInstance = null;
 
     function initLicenseSwiper() {
         if (window.innerWidth < 1024) {
             // Активация слайдера
             if (!swiperInstance) {
-                swiperInstance = new Swiper('.documentsSwiper', {
+                swiperInstance = new Swiper('.stagesTreatmentSwiper', {
                     slidesPerView: 1,
                     spaceBetween: 20,
                     navigation: {
-                        nextEl: '.documents__swiper-button-next',
-                        prevEl: '.documents__swiper-button-prev',
+                        nextEl: '.stages-treatment__swiper-button-next',
+                        prevEl: '.stages-treatment__swiper-button-prev',
                     },
                     pagination: {
-                        el: '.documents__swiper-pagination',
+                        el: '.stages-treatment__swiper-pagination',
                         clickable: true,
                     },
                     breakpoints: {
-                        650: {
+                        320: {
+                            slidesPerView: 1.08,
+                            spaceBetween: 20
+                        },
+                        450: {
                             slidesPerView: 2,
                             spaceBetween: 20
                         },
@@ -95,9 +99,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             slidesPerView: 3,
                             spaceBetween: 20
                         },
-                        1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 26
+                        1023: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
                         }
                     }
                 });
@@ -126,6 +130,8 @@ document.addEventListener('DOMContentLoaded', function() {
         resizeTimeout = setTimeout(initLicenseSwiper, 150);
     });
 });
+
+
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     const licenseItems = document.querySelectorAll('.reviews-page__item');
@@ -294,108 +300,21 @@ const aboutClinickSwiper = new Swiper(".aboutClinickSwiper", {
     },
 });
 
-const doctorsClinicSwiper = new Swiper(".doctorsSwiper", {
+const doctorsClinicSwiper = new Swiper(".swiperReviewsSlider", {
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
-        nextEl: ".doctors-clinic__swiper-button-next",
-        prevEl: ".doctors-clinic__swiper-button-prev",
+        nextEl: ".reviews-slider__swiper-button-next",
+        prevEl: ".reviews-slider__swiper-button-prev",
     },
     pagination: {
-        el: ".doctors-clinic__swiper-pagination",
+        el: ".reviews-slider__swiper-pagination",
         clickable: true,
     },
 
     breakpoints: {
-        1100: {
-            slidesPerView: 4,
-            spaceBetween: 26,
-        },
-        850: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        600: {
+        1023: {
             slidesPerView: 2,
-            spaceBetween: 20,
-        },
-    },
-});
-
-const serviceSwiper = new Swiper(".serviceSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    grid: {
-        rows: 2,
-    },
-    navigation: {
-        nextEl: ".service__swiper-button-next",
-        prevEl: ".service__swiper-button-prev",
-    },
-    pagination: {
-        el: ".service__swiper-pagination",
-        clickable: true,
-    },
-
-    breakpoints: {
-        1200: {
-            slidesPerView: 4,
-            spaceBetween: 26,
-        },
-        850: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        600: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-    },
-});
-
-const modernNarcologySwiper = new Swiper(".modernNarcologySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".modern-narcology__swiper-button-next",
-        prevEl: ".modern-narcology__swiper-button-prev",
-    },
-    pagination: {
-        el: ".modern-narcology__swiper-pagination",
-        clickable: true,
-    },
-
-    breakpoints: {
-        1100: {
-            slidesPerView: 4,
-            spaceBetween: 26,
-        },
-        850: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        600: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-    },
-});
-
-const doctorSwiper = new Swiper(".doctorSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".doctor__swiper-button-next",
-        prevEl: ".doctor__swiper-button-prev",
-    },
-    pagination: {
-        el: ".doctor__swiper-pagination",
-        clickable: true,
-    },
-
-    breakpoints: {
-        1100: {
-            slidesPerView: 3,
             spaceBetween: 26,
         },
         850: {
@@ -409,45 +328,17 @@ const doctorSwiper = new Swiper(".doctorSwiper", {
     },
 });
 
-
-const reviewsSwiper = new Swiper(".reviewsSwiper", {
+const licenses = new Swiper(".licensesSwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
-        nextEl: ".reviews__swiper-button-next",
-        prevEl: ".reviews__swiper-button-prev",
+        nextEl: ".licenses__swiper-button-next",
+        prevEl: ".licenses__swiper-button-prev",
     },
     pagination: {
-        el: ".reviews__swiper-pagination",
+        el: ".licenses__swiper-pagination",
         clickable: true,
-    },
-
-    breakpoints: {
-        1100: {
-            slidesPerView: 3,
-            spaceBetween: 26,
-        },
-        850: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        600: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },
-    },
-});
-
-const usefulInformationSwiper = new Swiper(".usefulInformationSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".useful-information__swiper-button-next",
-        prevEl: ".useful-information__swiper-button-prev",
-    },
-    pagination: {
-        el: ".useful-information__swiper-pagination",
-        clickable: true,
+        type: "fraction",
     },
 
     breakpoints: {
@@ -456,69 +347,21 @@ const usefulInformationSwiper = new Swiper(".usefulInformationSwiper", {
             spaceBetween: 26,
         },
         850: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        600: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-    },
-});
-
-const licensySwiper = new Swiper(".licenseSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".license__swiper-button-next",
-        prevEl: ".license__swiper-button-prev",
-    },
-    pagination: {
-        el: ".license__swiper-pagination",
-        clickable: true,
-    },
-
-    breakpoints: {
-        1100: {
             slidesPerView: 4,
-            spaceBetween: 26,
+            spaceBetween: 20,
         },
-        850: {
+        420: {
             slidesPerView: 3,
             spaceBetween: 20,
         },
-        600: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-    },
-});
-
-
-
-const stocksSwiper = new Swiper(".stocksSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".current-promotions__swiper-button-next",
-        prevEl: ".current-promotions__swiper-button-prev",
-    },
-    pagination: {
-        el: ".current-promotions__swiper-pagination",
-        clickable: true,
-    },
-
-    breakpoints: {
-        1000: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-        },
-        768: {
+        320: {
             slidesPerView: 1.5,
-            spaceBetween: 10,
+            spaceBetween: 20,
         },
     },
 });
+
+
 
 
 /* End swipers */
