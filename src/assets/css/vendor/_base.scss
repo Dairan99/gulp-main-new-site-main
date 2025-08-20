@@ -617,7 +617,7 @@ select {
 .breadcrumbs a {
     font-size: 14px;
     line-height: 130%;
-    color: $color-breadcrumbs-arrow;
+    color: rgba(13, 36, 54, 0.5);
     transition: all 0.2s ease-in;
     font-weight: 400;
 }
@@ -625,7 +625,6 @@ select {
 .breadcrumbs li {
     font-size: 14px;
     line-height: 130%;
-    color: $color-breadcrumbs;
     font-weight: 500;
     transition: all 0.2s ease-in;
 }
@@ -635,7 +634,7 @@ select {
 }
 
 .breadcrumbs li:after {
-    content: ">";
+    content: "/";
     display: block;
     font-size: 20px;
     color: $color-breadcrumbs-arrow;
@@ -905,5 +904,93 @@ select {
 @media (max-width: 400px) {
     .container {
         padding: 0 10px;
+    }
+}
+
+.text-block {
+
+    h2 {
+        font-size: 42px;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+
+    .big-margin {
+        margin-bottom: 60px;
+    }
+
+    strong {
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+
+    a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        color: #708ECA;
+        text-decoration-skip-ink: none;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-bottom: 20px;
+    }
+
+    li {
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 5px;
+        padding-left: 14px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $color-red;
+            top: 50%;
+            left: 0;
+        }
+    }
+
+    img {
+        max-height: 360px;
+        object-fit: cover;
+        float: right;
+        border-radius: 20px;
+        margin: 0 0 20px 80px;
+
+        @media (max-width: 1100px) {
+            margin: 0 0 20px 0;
+            float: none;
+            width: 100%;
+        }
     }
 }
