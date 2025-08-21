@@ -361,6 +361,38 @@ const licenses = new Swiper(".licensesSwiper", {
     },
 });
 
+const cards = new Swiper(".cardsSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".cards__swiper-button-next",
+        prevEl: ".cards__swiper-button-prev",
+    },
+    pagination: {
+        el: ".cards__swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        1023: {
+            slidesPerView: 3,
+            spaceBetween: 26,
+        },
+        850: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        550: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        320: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+        },
+    },
+});
+
 
 
 
