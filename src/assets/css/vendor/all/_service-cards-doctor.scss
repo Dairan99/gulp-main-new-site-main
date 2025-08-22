@@ -1,0 +1,123 @@
+.service-cards-doctor {
+
+    &__list {
+        display: flex;
+        gap: 25px;
+        
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 26px 47px 21px 47px;
+        background-color: #F8FAFE;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        max-width: 383px;
+
+       @media (max-width: 1023px) {
+        padding: 17px 23px 25px 23px;
+       }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: #3F598A;
+            border-radius: 15px 15px 0 0;
+        }
+
+        &--green {
+
+            &::before {
+                background-color: #36B37E;;
+            }
+
+            .service-cards__item-title {
+                color: #36B37E;
+            }
+
+            .service-cards__item-price {
+                color: #36B37E;
+            }
+        }
+
+         &--dark-blue {
+
+            &::before {
+                background-color: #1565D8;;
+            }
+
+            .service-cards__item-title {
+                color: #1565D8;
+            }
+
+            .service-cards__item-price {
+                color: #1565D8;
+            }
+        }
+    }
+
+    &__item-title {
+        display: block;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 30px;
+        text-align: center;
+        color: #3F598A;
+        margin-bottom: 15px;
+
+        @media (max-width: 1023px) {
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+
+    &__internal-list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    &__internal-item {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+
+        @media (max-width: 1023px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__item-price {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 30px;
+        color: #3F598A;
+        padding: 20px 0 0 0;
+        border-top: 1px solid #DDE4F3;
+
+        @media (max-width: 1023px) {
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+
+    &__item--green {
+        &__title {
+            color: #36B37E;
+        }
+    }
+
+}

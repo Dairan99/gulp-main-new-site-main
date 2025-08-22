@@ -393,6 +393,42 @@ const cards = new Swiper(".cardsSwiper", {
     },
 });
 
+const ourspecialists = new Swiper(".ourSpecialistsSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".our-specialists__swiper-button-next",
+        prevEl: ".our-specialists__swiper-button-prev",
+    },
+    pagination: {
+        el: ".our-specialists-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        1023: {
+            slidesPerView: 4,
+            spaceBetween: 35,
+        },
+        850: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+        },
+        550: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        450: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        320: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+        },
+    },
+});
+
 
 
 

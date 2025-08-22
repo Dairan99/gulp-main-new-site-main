@@ -1,0 +1,111 @@
+.price-table {
+
+    &__table {
+        width: 100%;
+        border-radius: 30px;
+        background-color: #F8FAFE;
+        border: 1px solid #DDE4F3;
+        padding: 35px 50px;
+        border-collapse: separate;
+        border-spacing: 0;
+        counter-reset: section;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+
+        @media (max-width: 1023px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+
+        @media (max-width: 1023px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__service {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        color: #EA1414;
+
+        @media (max-width: 1023px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    & tr {
+        display: flex;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+
+        td:nth-child(1) {
+            flex-grow: 1;
+        }
+
+        td:nth-child(1)::before {
+            counter-increment: section;
+            content: counter(section, decimal-leading-zero);
+            font-weight: bold;
+            color: rgba(13, 36, 54, 0.35);
+            margin-right: 60px;
+            font-size: 20px;
+            line-height: 25px;
+
+            @media (max-width: 1023px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        td:nth-child(2) {
+            flex-basis: 15%;
+        }
+
+        td:nth-child(3) {
+            flex-basis: 150px;
+        }
+
+        @media (max-width: 1023px) {
+            td:nth-child(1) {
+                flex: 0 0 50%; 
+            }
+            
+            td:nth-child(2) {
+                flex: 1;
+                text-align: right;
+            }
+            
+            td:nth-child(3) {
+                flex: 0 0 100%;
+                text-align: left;
+            }
+        }
+    }
+
+    & tr:not(:last-child) td {
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid #DDE4F3;
+
+        @media (max-width: 1023px) {
+            border-bottom: none;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        & tr:not(:last-child) td:nth-child(3) {
+                border-bottom: 1px solid #DDE4F3;
+            }
+    }
+}
