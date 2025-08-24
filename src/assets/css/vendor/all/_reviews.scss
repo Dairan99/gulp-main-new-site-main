@@ -5,7 +5,12 @@
         font-size: 42px;
         line-height: 107%;
         color: #0D2436;
-        margin-bottom: 31px;
+        margin-bottom: 40px;
+
+        @media (max-width: 1023px) {
+            font-size: 28px;
+            line-height: 35px;
+        }
     }
 
     &__container {
@@ -14,6 +19,9 @@
 
     &__wrapper {
         display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 140px;
     }
 
     &__swipper-wrapper {
@@ -39,6 +47,11 @@
         font-size: 20px;
         line-height: 125%;
         color: #0D2436;
+
+        @media (max-width: 1023px) {
+            font-size: 16px;
+            line-height: 25px;
+        }
     }
 
     &__item-text {
@@ -50,6 +63,11 @@
         max-height: 150px;
         min-height: 149px;
         overflow: hidden;
+
+        @media (max-width: 1023px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &__item-text.expanded {
@@ -129,16 +147,16 @@
     &__wrapper-buttons {
         display: flex;
         gap: 15px;
-        
+
         @media (max-width: 1023px) {
             display: none;
         }
     }
 
-    
+
     &__swiper-button {
         position: relative;
-        width:50px;
+        width: 50px;
         max-width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -159,5 +177,156 @@
     &__item-bottom {
         display: flex;
         justify-content: end;
+    }
+
+    &__container {
+        width: 100%;
+        max-width: 1690px;
+        margin: 0 auto;
+        padding: 0 15px;
+        border-radius: 30px;
+        background-image: url('../img/img-banner-background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__content-left {
+        display: flex;
+        flex-direction: column;
+        padding: 0 185px 0 0;
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+        width: 100%;
+        max-width: 615px;
+
+        @media (max-width: 1200px) {
+            padding: 0 85px 0 0;
+        }
+
+        @media (max-width: 1023px) {
+            padding: 0;
+            border: 0;
+        }
+    }
+
+    &__content-title {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 45px;
+        margin: 0 0 20px 0;
+        color: $color-white;
+    }
+
+    &__content-text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 25px;
+        margin: 0 0 50px 0;
+        color: $color-white;
+
+        @media (max-width: 1023px) {
+            padding: 0 0 20px 0;
+            margin: 0 0 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @media (max-width: 1023px) {
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 0 30px 0;
+        }
+    }
+
+    &__content-call {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 25px;
+        color: rgba(255, 255, 255, 0.75);
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    &__content-tel {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: $color-white;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
+    }
+
+    &__content-right {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 0 0 195px;
+
+        @media (max-width: 1200px) {
+            padding: 0 0 0 95px;
+        }
+
+        @media (max-width: 1023px) {
+            padding: 0;
+        }
+    }
+
+    &__banner-container {
+        width: 100%;
+        max-width: 1690px;
+        margin: 0 auto;
+        padding: 0 15px;
+        border-radius: 30px;
+        background-image: url('../img/img-baner-2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__banner-title {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 45px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__banner-content {
+        padding: 60px 105px;
+    }
+
+    &__banner-row {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__banner-btn {
+        max-width: 280px;
+        width: 100%;
+        height: 50px;
+    }
+
+    &__banner-policy {
+        color: rgba(13, 36, 54, 0.75);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    &__banner-link {
+        color: rgba(13, 36, 54, 0.75);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
     }
 }
