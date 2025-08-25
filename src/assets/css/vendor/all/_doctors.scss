@@ -1,0 +1,59 @@
+.doctors {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 42px 35px;
+
+        @media (max-width: 1023px) {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+      
+        width: 100%;
+        max-width: 274px;
+    }
+
+    &__item-link {
+         display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__img {
+        border-radius: 40px 15px 80px 15px;
+        object-fit: cover;
+    }
+
+    &__speciality {
+        display: block;
+        position: relative;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 25px;
+        color: $color-light-black;
+
+
+        &::before {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #EA1414;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+    }
+
+    &__name {
+        display: block;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        color: $color-light-black;
+    }
+
+}

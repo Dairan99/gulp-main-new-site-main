@@ -127,10 +127,6 @@
         flex-direction: column;
     }
 
-    &__content-middle-list ol::marker {
-        color: $color-white;
-    }
-
     &__content-middle-left-title {
         font-weight: 700;
         font-size: 28px;
@@ -160,11 +156,33 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        counter-reset: list-counter;
     }
 
     &__content-middle-item {
         display: flex;
         gap: 8px;
+        counter-increment: list-counter;
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 40px; 
+
+         &::before {
+            content: counter(list-counter) "."; // Выводим цифру
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: #84A4E4;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
     }
 
     &__content-middle-item-link {
@@ -172,6 +190,14 @@
         font-size: 16px;
         line-height: 25px;
         color: $color-light-black;
+        text-decoration: none;
+        color: #2c3e50;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-red;
+            text-decoration: underline;
+        }
 
         @media (max-width: 1023px) {
             font-size: 14px;

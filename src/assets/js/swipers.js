@@ -393,6 +393,38 @@ const cards = new Swiper(".cardsSwiper", {
     },
 });
 
+const doctorCertificates = new Swiper(".doctorSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".doctor-slider__swiper-button-next",
+        prevEl: ".doctor-slider__swiper-button-prev",
+    },
+    pagination: {
+        el: ".doctor-slider__swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        1023: {
+            slidesPerView: 3,
+            spaceBetween: 26,
+        },
+        850: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        550: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        320: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+        },
+    },
+});
+
 const ourspecialists = new Swiper(".ourSpecialistsSwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
