@@ -328,6 +328,38 @@ const doctorsClinicSwiper = new Swiper(".swiperReviewsSlider", {
     },
 });
 
+const articleSwiper = new Swiper(".articleSlider", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".article__swiper-button-next",
+        prevEl: ".article__swiper-button-prev",
+    },
+    pagination: {
+        el: ".article__swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        1023: {
+            slidesPerView: 3,
+            spaceBetween: 35,
+        },
+        850: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        400: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+        },
+    },
+});
+
 const licenses = new Swiper(".licensesSwiper", {
     slidesPerView: 1,
     spaceBetween: 10,

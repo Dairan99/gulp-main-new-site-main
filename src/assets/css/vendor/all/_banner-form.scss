@@ -22,6 +22,61 @@
         background-position: center;
     }
 
+    &__container--light-img {
+        background-image: url('../img/img-baner-2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 60px;
+
+        & .banner__content {
+            padding: 60px 80px;
+        }
+
+        & .banner__content-title {
+            color: $color-light-black;
+        }
+
+        & .banner__content-text {
+            color: $color-light-black;
+        }
+
+        & .banner__content-call {
+            color: $color-light-black;
+        }
+
+        & .banner__content-tel {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            color: $color-light-black;
+            text-decoration: none;
+        }
+
+        & .form-banner__policy p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $color-light-black;
+        }
+
+        & .form-banner__link {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $color-light-black;
+        }
+
+        & .banner__content-left {
+            padding: 0 62px 0 0;
+            border-right: 1px solid rgba(13, 36, 54, 0.5);
+        }
+
+        & .banner__content-right {
+            padding: 0 0 0 62px;
+        }
+    }
+
     &__content-left {
         display: flex;
         flex-direction: column;
