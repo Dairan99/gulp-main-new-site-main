@@ -1688,7 +1688,7 @@ select {
 .header__middle-tel {
   display: flex;
   gap: 10px;
-  margin: 0 40px 0 0;
+  margin: 0 15px 0 0;
   align-items: center;
 }
 .header__middle-location {
@@ -1706,7 +1706,7 @@ select {
 .header__middle-licensy {
   color: rgba(13, 36, 54, 0.5);
   font-weight: 400;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 15px;
 }
 .header__middle-logo {
@@ -5216,7 +5216,7 @@ select {
 .footer__bottom-text {
   padding: 20px 0;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 15px;
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
